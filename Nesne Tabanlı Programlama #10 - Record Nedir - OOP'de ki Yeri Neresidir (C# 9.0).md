@@ -1,12 +1,12 @@
-# **Record'u Anlayabilmek İçin Ön Hazırlık | Init-Only Properties**
+# **`Record`'u Anlayabilmek İçin Ön Hazırlık | `Init-Only Properties`**
 
-- C# 9.0'da, herhangi bir nesnenin property'lerine ilk değerinin verilmesi ve sonraki süreçte bu değerlerin değiştirilmemesini garanti altına almamızı sağlayan Init-Only Properties özelliği gelmiştir. Yani elimizdeki nesnenin herhangi bir property'sini read only hale getiriyor.
-- Bu özellik sayesinde nesnenin sadece ilk yaratılş anında property'lerine değer atanmakta ve böylece iş kuralları gereği runtime'da değeri değişmemesi gerekn nesneler için ideal bir önlem alınmaktadır.
-- Oluşturulan nesnenin oluşum sürecinde(Object Initializer sürecinde), orada ilk değer atayabiliyorsak Init-Only Properties, atayamıyorsak read only(getter only) properties.
+- C# 9.0'da, herhangi bir nesnenin `property`'lerine ilk değerinin verilmesi ve sonraki süreçte bu değerlerin değiştirilmemesini garanti altına almamızı sağlayan `Init-Only Properties` özelliği gelmiştir. Yani elimizdeki nesnenin herhangi bir `property`'sini `read only` hale getiriyor.
+- Bu özellik sayesinde nesnenin sadece ilk yaratılş anında `property`'lerine değer atanmakta ve böylece iş kuralları gereği `runtime`'da değeri değişmemesi gerekn nesneler için ideal bir önlem alınmaktadır.
+- Oluşturulan nesnenin oluşum sürecinde(`Object Initializer` sürecinde), orada ilk değer atayabiliyorsak `Init-Only Properties`, atayamıyorsak `read only`(`getter only`) `properties`.
 
-# **Init-Only Properties Tanımlama**
+# **`Init-Only Properties` Tanımlama**
 
-- Init-Only Property oluşturabilmek için "`init`" keyword'ü kullanılmalıdır.
+- `Init-Only Property` oluşturabilmek için "`init`" keyword'ü kullanılmalıdır.
 
 - Örneğin;
 
@@ -14,19 +14,19 @@
 public string Name{get; init;} = "kutsal isyan";
 ```
 
--init keyword'ü, get olmadan kullanılamaz ayrıca set ile de kullanılamaz.
+-`init` keyword'ü, `get` olmadan kullanılamaz ayrıca `set` ile de kullanılamaz.
 
-# **Records Nedir?**
+# **`Records` Nedir?**
 
-- Eğer ki tek bir property'de read only'lik amaç ediniliyorsa Init-Only Properties özelliği kullanılır.
-- Eğer ki bir objeyi bütünsel olarak değişmez yapmak istiyorsak Record türü kullanılır.
-- Record, bir objenin topyekün olarak sabit/değişmez kalmasını sağlamakta ve bu durumu güvence altına almaktadır.
-- Böylece bu obje, artık değeri değişmeyeceğinden dolayı esasında object'den ziyade bir değer gözüyle bakılabilir yapıya dönüşmektedir.
-- Nesne ön plandaysa bu class, nesnenin değerleri ön plandaysa bu record'dur.
-- Record'lar bir class'dır. Sadece nesnelerinden ziyade, değerleri ön plana çıkmış bir class.
-- Yani class'larda nesne ön planda olduğu için oluşturulan instance'ler Equals(x, y) ,le false sonuç döner. Record'larda değerler ön planda olduğu için oluşturulan instance'ler Equals(x, y) ile true sonuç döner.
+- Eğer ki tek bir `property`'de `read only`'lik amaç ediniliyorsa `Init-Only Properties` özelliği kullanılır.
+- Eğer ki bir objeyi bütünsel olarak değişmez yapmak istiyorsak `Record` türü kullanılır.
+- `Record`, bir objenin topyekün olarak sabit/değişmez kalmasını sağlamakta ve bu durumu güvence altına almaktadır.
+- Böylece bu obje, artık değeri değişmeyeceğinden dolayı esasında `object`'den ziyade bir değer gözüyle bakılabilir yapıya dönüşmektedir.
+- Nesne ön plandaysa bu `class`, nesnenin değerleri ön plandaysa bu `record`'dur.
+- `Record`'lar bir `class`'dır. Sadece nesnelerinden ziyade, değerleri ön plana çıkmış bir `class`.
+- Yani `class`'larda nesne ön planda olduğu için oluşturulan `instance`'ler `Equals(x, y)` ile `false` sonuç döner. `Record`'larda değerler ön planda olduğu için oluşturulan `instance`'ler `Equals(x, y)` ile `true` sonuç döner.
 
-# **Record Tanımlama**
+# **`Record` Tanımlama**
 
 - Prototip:
 
@@ -48,12 +48,12 @@ public record Book
 ```
 
 > NOT:
-> Record içinde, class ile yapılan bütün tanımlamalar yapılabilir. Record'un içinde değeri ön planda tutmak için oluşturulan property'lerin hepsini init yapmalıyız.
+> `Record` içinde, `class` ile yapılan bütün tanımlamalar yapılabilir. `Record`'un içinde değeri ön planda tutmak için oluşturulan `property`'lerin hepsini `init` yapmalıyız.
 
-# **With Expressions**
+# **`With Expressions`**
 
-- Immutable(sabit/değişmeyen) türlerde çalışırken nesne üzerinde değişiklik yapabilmek için ilgili nesneyi ya çoğaltmamız(deep copy) ve üzerinde değişiklik yapmamız gerekmekte ya da manuel olarak yeni bir nesne üretip mevcut nesnedeli değerleri, değişikliği yansıtacak şekilde aktamamız gerekmektedir.
-- Record kullanımı ile elimizdeki record'u direkt kopyalamayı sağlayan with ifadesi vardır.
+- `Immutable`(sabit/değişmeyen) türlerde çalışırken nesne üzerinde değişiklik yapabilmek için ilgili nesneyi ya çoğaltmamız(`deep copy`) ve üzerinde değişiklik yapmamız gerekmekte ya da manuel olarak yeni bir nesne üretip mevcut nesnedeki değerleri, değişikliği yansıtacak şekilde aktamamız gerekmektedir.
+- `Record` kullanımı ile elimizdeki `record`'u direkt kopyalamayı sağlayan `with` ifadesi vardır.
 
 - Örnek:
 
