@@ -1,23 +1,23 @@
-# **Bir Programcı Açısından Kalıtım(Inheritance) Nedir?**
+# **Bir Programcı Açısından Kalıtım(`Inheritance`) Nedir?**
 
-- Kalıtım, OOP'nin en önmli özelliğidir.
+- Kalıtım, `OOP`'nin en önmli özelliğidir.
 - Üretilen nesneler farkl nesnelere özelliklerini aktarabilmekte ve böylece hiyerarşik bir düzenleme yapılabilmektedir.
 - Bir programcı açısından bu özellik;
 
   - Aynı aile grubundan gelen nesnelerin ya da eşit seviyede olan tüm olguların benzer özelliklerini tekrar tekrar her birinde tanımlamaktansa bir üst sınıfta tanımlanmasını ve her bir sınıfın özellikleri üst sınıftan kalıtımsal olarak almasını sağlamaktadır.
   - Böylece hem kod maliyeti düşmekte, hem de mimarisel tasarım açısından avantaj sağlanmaktadır.
 
-- Yani amaç; Aynı olguda olan sınıfların tekrar eden memberları başka sınıfta toplansın ve oradan ilgili sınıflara kalıtımsal olarak aktarılsın.
-- Erkek ve kadın sınıfları insan sınıfından kalıtım alırsa/türetilirse/miras alırsa insan sınıfındaki tüm member'lar (erişimine/miras olarak aktarılmasına izin verilen memberlar) miras olarak aktarılacaktır.
+- Yani amaç; Aynı olguda olan sınıfların tekrar eden `member`'ları başka sınıfta toplansın ve oradan ilgili sınıflara kalıtımsal olarak aktarılsın.
+- Erkek ve kadın sınıfları insan sınıfından kalıtım alırsa/türetilirse/miras alırsa insan sınıfındaki tüm `member`'lar (erişimine/miras olarak aktarılmasına izin verilen `member`'lar) miras olarak aktarılacaktır.
 - Genellenemeyen, diğerlerinde olmayan ve sadece o sınıfa ait olan özellikler direkt olarak ilgili sınıfta tanımlanmalıdır.
-- OOP'de kalıtım özünde nesnelerin birbirinden türemesini saplayan bir özelliktir.
+- `OOP`'de kalıtım özünde nesnelerin birbirinden türemesini saplayan bir özelliktir.
 
 # **C# Programlama Dilinde Hangi Yapılar Kalıtım Alabilirler?**
 
 - C# programlama dilinde kalıtım sınıflara özel bir niteliktir.
-- Yani bbir sınıf sadece bir sınıftan kalıtım alabilir.
-- Record'lar kalıtım alabilmektedir ancak sadece kendi aralarında. Aklıtım alabildikleri tek istisnai sınıf `object` sınıfıdır.
-- Ayrtıca abstract class, interface ve struct gibi yapıların da kendilerine göre kalıtımsal operasyonları mevcuttur.
+- Yani bir sınıf sadece bir sınıftan kalıtım alabilir.
+- `Record`'lar kalıtım alabilmektedir ancak sadece kendi aralarında. Aklıtım alabildikleri tek istisnai sınıf `object` sınıfıdır.
+- Ayrtıca `abstract class`, `interface` ve `struct` gibi yapıların da kendilerine göre kalıtımsal operasyonları mevcuttur.
 
 # **C#'ta Kalıtım Nasıl Alınır?**
 
@@ -41,4 +41,3 @@ class Opel : Araba //Soldaki, sağdakinden kalıtım alsın. Yani Opel sınıfı
 ```
 
 ![oop-5](oop-5.png)
-
