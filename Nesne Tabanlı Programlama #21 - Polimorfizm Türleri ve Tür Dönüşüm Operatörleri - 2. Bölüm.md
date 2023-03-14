@@ -11,12 +11,12 @@ C c = (C)a;
 ```
 
 - `A` türünden olan `a` referansındaki, özünde `C`türünden nesne, kendi türünden bir referansla işaretlenmiştir.
-- Bu durumun tersi de geçerlidir. Yani ilgili nesne kendi türünden, kalıtımsal olarak ataları olan diğer türlere Cast edilebilir.
-- Cast operatörü, üst türden alt türe kalıtımsal ilişkide dönüşüm sağlar, tersine alt türden üste de dönüşüm yapabilir.
+- Bu durumun tersi de geçerlidir. Yani ilgili nesne kendi türünden, kalıtımsal olarak ataları olan diğer türlere `Cast` edilebilir.
+- `Cast` operatörü, üst türden alt türe kalıtımsal ilişkide dönüşüm sağlar, tersine alt türden üste de dönüşüm yapabilir.
 
 # **`as` Operatörü**
 
-- Cast gibi kalıtımsal ilişki olan türler arasında referans dönüşümü yapabilmemizi sağlayan operatördür.
+- `Cast` gibi kalıtımsal ilişki olan türler arasında referans dönüşümü yapabilmemizi sağlayan operatördür.
 - Fiziksel nesnenin kalıtım hiyerarşisine uygun olan türlere `true`, olmayan türlere `false`sonucunu dönmektedir.
 
 > NOT:
