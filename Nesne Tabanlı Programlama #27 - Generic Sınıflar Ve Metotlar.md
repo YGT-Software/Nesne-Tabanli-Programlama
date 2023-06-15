@@ -1,8 +1,14 @@
-# **Generic Sınıflar Ve Metotlar**
+---
+title: "Nesne Tabanlı Programlama #27 - Generic Sınıflar Ve Metotlar"
+subtitle: "OOP-24"
+date: "15-06-2023"
+---
 
-- Generic'ler ile sıklıkla yaptığımız operasyonları nesne bazlı olarak değiştirebileceğimiz bir yapı oluşturabiliriz.
+# **`Generic` Sınıflar Ve Metotlar**
 
-- Generic bir yapıyı oluşturabilmek için örneğin interface'ye veya class'a `<>` işareti içine bir şey yazmalıyız. Örneğin: `<T>`
+- `Generic`'ler ile sıklıkla yaptığımız operasyonları nesne bazlı olarak değiştirebileceğimiz bir yapı oluşturabiliriz.
+
+- `Generic` bir yapıyı oluşturabilmek için örneğin `interface`'ye veya `class`'a `<>` işareti içine bir şey yazmalıyız. Örneğin: `<T>`
 
 ```csharp
     interface IRepository<T>
@@ -43,9 +49,9 @@
 
 ---
 
-## Generic Metotlar
+## `Generic` Metotlar
 
-- Generic'ler metotlar için de kullanılabilir.
+- `Generic`'ler metotlar için de kullanılabilir.
 
 Örneğin
 
@@ -75,9 +81,9 @@ class Program
 
 ---
 
-## Generic Kısıtları
+## `Generic` Kısıtları
 
-- <T> ile generic yapı oluştururken T'nin olabileceği yapıları kısıtlayabiliriz.
+- <T> ile `generic` yapı oluştururken `T`'nin olabileceği yapıları kısıtlayabiliriz.
 
 ```csharp
  interface IRepository<T> where T:class,IEntity,new()// Burada T referans tip olmalı, T IEntity'den implement etmeli ve T new'lenebilir olmalı dedik.
